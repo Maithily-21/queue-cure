@@ -4,6 +4,15 @@ public class QueueStatusResponse {
 
     private Integer currentToken;
     private Integer waitingCount;
+    private Integer averageConsultationTime;
+
+    public Integer getAverageConsultationTime() {
+        return averageConsultationTime;
+    }
+
+    public void setAverageConsultationTime(Integer averageConsultationTime) {
+        this.averageConsultationTime = averageConsultationTime;
+    }
 
     public QueueStatusResponse(
             Integer currentToken,

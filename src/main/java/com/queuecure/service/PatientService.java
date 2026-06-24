@@ -76,10 +76,15 @@ public class PatientService {
                 current.map(Patient::getTokenNumber)
                         .orElse(0);
 
-        return new QueueStatusResponse(
-                currentToken,
-                waitingCount
-        );
+        QueueStatusResponse response =
+                new QueueStatusResponse(
+                        currentToken,
+                        waitingCount
+                );
+
+        response.setAverageConsultationTime(5);
+
+        return response;
     }
 
 
